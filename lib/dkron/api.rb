@@ -6,7 +6,7 @@
 #   https://github.com/interagent/heroics
 #
 
-require 'api/version'
+require 'dkron/api/version'
 require 'heroics'
 require 'uri'
 
