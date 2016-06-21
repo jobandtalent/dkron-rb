@@ -48,6 +48,7 @@ module Dkron
     # -
     attr_accessor :disabled
 
+    # Tags asociated with this node
     attr_accessor :tags
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -95,7 +96,7 @@ module Dkron
         :'last_success' => :'DateTime',
         :'last_error' => :'DateTime',
         :'disabled' => :'BOOLEAN',
-        :'tags' => :'Tags'
+        :'tags' => :'Hash<String, String>'
         
       }
     end
@@ -152,7 +153,9 @@ module Dkron
       end
       
       if attributes[:'tags']
-        self.tags = attributes[:'tags']
+        if (value = attributes[:'tags']).is_a?(Array)
+          self.tags = value
+        end
       end
       
     end

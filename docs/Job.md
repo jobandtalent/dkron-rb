@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **last_success** | **DateTime** | - | [optional] 
 **last_error** | **DateTime** | - | [optional] 
 **disabled** | **BOOLEAN** | - | [optional] 
-**tags** | [**Tags**](Tags.md) |  | [optional] 
+**tags** | **Hash&lt;String, String&gt;** | Tags asociated with this node | [optional] 
 
 
