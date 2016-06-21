@@ -15,22 +15,22 @@ require 'date'
 module Dkron
   # An execution represents a timed job run.
   class Execution
-    # -
+    # job name
     attr_accessor :job_name
 
-    # -
+    # start time of the execution
     attr_accessor :started_at
 
-    # -
+    # when the execution finished running
     attr_accessor :finished_at
 
-    # -
+    # the execution run successfuly
     attr_accessor :success
 
-    # -
+    # partial output of the command execution
     attr_accessor :output
 
-    # -
+    # name of the node that executed the command
     attr_accessor :node_name
 
     # Attribute mapping from ruby-style variable name to JSON key.

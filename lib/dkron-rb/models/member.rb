@@ -15,37 +15,36 @@ require 'date'
 module Dkron
   # A member represents a cluster member node.
   class Member
-    # -
+    # Node name
     attr_accessor :name
 
-    # -
+    # IP Address
     attr_accessor :addr
 
-    # -
+    # Port number
     attr_accessor :port
 
     # Tags asociated with this node
     attr_accessor :tags
 
-    # -
+    # The serf status of the node see: https://godoc.org/github.com/hashicorp/serf/serf#MemberStatus
     attr_accessor :status
 
-    # -
+    # Serf protocol minimum version this node can understand or speak
     attr_accessor :protocol_min
 
-    # -
     attr_accessor :protocol_max
 
-    # -
+    # Serf protocol current version this node can understand or speak
     attr_accessor :protocol_cur
 
-    # -
+    # Serf delegate protocol minimum version this node can understand or speak
     attr_accessor :delegate_min
 
-    # -
+    # Serf delegate protocol minimum version this node can understand or speak
     attr_accessor :delegate_max
 
-    # -
+    # Serf delegate protocol minimum version this node can understand or speak
     attr_accessor :delegate_cur
 
     # Attribute mapping from ruby-style variable name to JSON key.

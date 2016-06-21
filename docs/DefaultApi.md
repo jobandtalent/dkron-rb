@@ -90,7 +90,7 @@ No authorization required
 
 
 # **status**
-> InlineResponse200 status
+> Status status
 
 
 
@@ -116,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**Status**](Status.md)
 
 ### Authorization
 

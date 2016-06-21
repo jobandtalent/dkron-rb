@@ -17,13 +17,10 @@ require 'dkron-rb/version'
 require 'dkron-rb/configuration'
 
 # Models
-require 'dkron-rb/models/agent'
 require 'dkron-rb/models/execution'
-require 'dkron-rb/models/inline_response_200'
 require 'dkron-rb/models/job'
 require 'dkron-rb/models/member'
-require 'dkron-rb/models/serf'
-require 'dkron-rb/models/tags'
+require 'dkron-rb/models/status'
 
 # APIs
 require 'dkron-rb/api/default_api'
