@@ -66,7 +66,7 @@ describe 'DefaultApi' do
   # 
   # Gets `Status` object.\n
   # @param [Hash] opts the optional parameters
-  # @return [InlineResponse200]
+  # @return [Status]
   describe 'status test' do
     it "should work" do
       # assertion here

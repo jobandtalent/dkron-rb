@@ -133,7 +133,7 @@ module Dkron
     # 
     # Gets `Status` object.\n
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponse200]
+    # @return [Status]
     def status(opts = {})
       data, status_code, headers = status_with_http_info(opts)
       return data
@@ -142,7 +142,7 @@ module Dkron
     # 
     # Gets `Status` object.\n
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponse200, Fixnum, Hash)>] InlineResponse200 data, response status code and response headers
+    # @return [Array<(Status, Fixnum, Hash)>] Status data, response status code and response headers
     def status_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi#status ..."
@@ -178,7 +178,7 @@ module Dkron
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse200')
+        :return_type => 'Status')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#status\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
