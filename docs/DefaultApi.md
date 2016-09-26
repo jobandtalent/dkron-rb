@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-List members.\n
+List members. 
 
 ### Example
 ```ruby
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
@@ -54,7 +54,7 @@ No authorization required
 
 
 
-Force the node to leave the cluster.\n
+Force the node to leave the cluster. 
 
 ### Example
 ```ruby
@@ -82,7 +82,7 @@ This endpoint does not need any parameter.
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
@@ -94,7 +94,7 @@ No authorization required
 
 
 
-Gets `Status` object.\n
+Gets `Status` object. 
 
 ### Example
 ```ruby
@@ -122,7 +122,7 @@ This endpoint does not need any parameter.
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 
-List members.\n
+List members. 
 
 ### Example
 ```ruby
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json

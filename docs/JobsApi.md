@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 
-Create or updates a new job.\n
+Create or updates a new job. 
 
 ### Example
 ```ruby
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
@@ -62,7 +62,7 @@ No authorization required
 
 
 
-Delete a job.\n
+Delete a job. 
 
 ### Example
 ```ruby
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
@@ -108,7 +108,7 @@ No authorization required
 
 
 
-List jobs.\n
+List jobs. 
 
 ### Example
 ```ruby
@@ -136,7 +136,7 @@ This endpoint does not need any parameter.
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
@@ -148,7 +148,7 @@ No authorization required
 
 
 
-Executes a job.\n
+Executes a job. 
 
 ### Example
 ```ruby
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
@@ -194,7 +194,7 @@ No authorization required
 
 
 
-Show a job.\n
+Show a job. 
 
 ### Example
 ```ruby
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
