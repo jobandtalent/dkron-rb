@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 
-List executions.\n
+List executions. 
 
 ### Example
 ```ruby
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 No authorization required
 
-### HTTP reuqest headers
+### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
