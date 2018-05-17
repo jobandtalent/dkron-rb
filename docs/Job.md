@@ -5,8 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Name for the job. | 
 **schedule** | **String** | Cron expression for the job. | 
-**command** | **String** | Command to run. | 
-**shell** | **BOOLEAN** | Use shell to run the command | [optional] 
+**timezone** | **String** | Timezone where the job will be executed. By default and when field is set to empty string, the job will run in local time. | [optional] 
 **owner** | **String** | Owner of the job | [optional] 
 **owner_email** | **String** | Email of the owner | [optional] 
 **success_count** | **Integer** | Number of successful executions | [optional] 
@@ -17,8 +16,10 @@ Name | Type | Description | Notes
 **tags** | **Hash&lt;String, String&gt;** | Target nodes tags of this job | [optional] 
 **retries** | **Integer** | Number of times to retry a failed job execution | [optional] 
 **parent_job** | **String** | The name/id of the job that will trigger the execution of this job | [optional] 
-**dependent_jobs** | [**Array&lt;null&gt;**](.md) | Array containing the jobs that depends on this one | [optional] 
-**processors** | **Hash&lt;String, String&gt;** | Processor plugins used to process executions results of this job | [optional] 
+**dependent_jobs** | **Array&lt;String&gt;** | Array containing the jobs that depends on this one | [optional] 
+**processors** | [**Processors**](Processors.md) |  | [optional] 
 **concurrency** | **String** | Concurrency policy for the job allow/forbid | [optional] 
+**executor** | **String** | Executor plugin used to run the job | [optional] 
+**executor_config** | [**ExecutorConfig**](ExecutorConfig.md) |  | [optional] 
 
 

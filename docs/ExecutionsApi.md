@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost:8080/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list_executions_by_job**](ExecutionsApi.md#list_executions_by_job) | **GET** /executions/{job_name} | 
+[**list_executions_by_job**](ExecutionsApi.md#list_executions_by_job) | **GET** /jobs/{job_name}/executions | 
 
 
 # **list_executions_by_job**

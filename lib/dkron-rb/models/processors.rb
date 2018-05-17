@@ -13,8 +13,8 @@ Swagger Codegen version: 2.3.1
 require 'date'
 
 module Dkron
-  # Status represents details about the node.
-  class Status
+  # Processor plugins used to process executions results of this job
+  class Processors
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map

@@ -13,18 +13,32 @@ Swagger Codegen version: 2.3.1
 require 'date'
 
 module Dkron
-  # Status represents details about the node.
-  class Status
+  # Shell executor runs a command in shell
+  class ExecutorShell
+    # Command to run
+    attr_accessor :command
+
+    # Comma separated environment variables pair
+    attr_accessor :env
+
+    attr_accessor :shell
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'command' => :'command',
+        :'env' => :'env',
+        :'shell' => :'shell'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'command' => :'String',
+        :'env' => :'String',
+        :'shell' => :'BOOLEAN'
       }
     end
 
@@ -35,6 +49,18 @@ module Dkron
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'command')
+        self.command = attributes[:'command']
+      end
+
+      if attributes.has_key?(:'env')
+        self.env = attributes[:'env']
+      end
+
+      if attributes.has_key?(:'shell')
+        self.shell = attributes[:'shell']
+      end
 
     end
 
@@ -55,7 +81,10 @@ module Dkron
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
-      self.class == o.class
+      self.class == o.class &&
+          command == o.command &&
+          env == o.env &&
+          shell == o.shell
     end
 
     # @see the `==` method
@@ -67,7 +96,7 @@ module Dkron
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [].hash
+      [command, env, shell].hash
     end
 
     # Builds the object from hash

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 
-List members. 
+List leader of cluster. 
 
 ### Example
 ```ruby
