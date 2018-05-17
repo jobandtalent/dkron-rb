@@ -13,18 +13,27 @@ Swagger Codegen version: 2.3.1
 require 'date'
 
 module Dkron
-  # Status represents details about the node.
-  class Status
+  # Files processor save execution output to disk files.
+  class ProcessorFiles
+    # Forward the output to the next processor
+    attr_accessor :forward
+
+    attr_accessor :log_dir
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'forward' => :'forward',
+        :'log_dir' => :'log_dir'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'forward' => :'BOOLEAN',
+        :'log_dir' => :'String'
       }
     end
 
@@ -35,6 +44,14 @@ module Dkron
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'forward')
+        self.forward = attributes[:'forward']
+      end
+
+      if attributes.has_key?(:'log_dir')
+        self.log_dir = attributes[:'log_dir']
+      end
 
     end
 
@@ -55,7 +72,9 @@ module Dkron
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
-      self.class == o.class
+      self.class == o.class &&
+          forward == o.forward &&
+          log_dir == o.log_dir
     end
 
     # @see the `==` method
@@ -67,7 +86,7 @@ module Dkron
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [].hash
+      [forward, log_dir].hash
     end
 
     # Builds the object from hash
