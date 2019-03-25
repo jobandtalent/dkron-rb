@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_jobs**](JobsApi.md#get_jobs) | **GET** /jobs | 
 [**run_job**](JobsApi.md#run_job) | **POST** /jobs/{job_name} | 
 [**show_job_by_name**](JobsApi.md#show_job_by_name) | **GET** /jobs/{job_name} | 
+[**toggle_job**](JobsApi.md#toggle_job) | **POST** /jobs/{job_name}/toggle | 
 
 
 # **create_or_update_job**
@@ -71,7 +72,7 @@ require 'dkron-rb'
 
 api_instance = Dkron::JobsApi.new
 
-job_name = "job_name_example" # String | The job that needs to be deleted.
+job_name = 'job_name_example' # String | The job that needs to be deleted.
 
 
 begin
@@ -104,7 +105,7 @@ No authorization required
 
 
 # **get_jobs**
-> Array&lt;Job&gt; get_jobs
+> Array&lt;Job&gt; get_jobs(opts)
 
 
 
@@ -117,8 +118,12 @@ require 'dkron-rb'
 
 api_instance = Dkron::JobsApi.new
 
+opts = { 
+  tags: ['tags_example'] # Array<String> | Filter jobs by tags
+}
+
 begin
-  result = api_instance.get_jobs
+  result = api_instance.get_jobs(opts)
   p result
 rescue Dkron::ApiError => e
   puts "Exception when calling JobsApi->get_jobs: #{e}"
@@ -126,7 +131,10 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tags** | [**Array&lt;String&gt;**](String.md)| Filter jobs by tags | [optional] 
 
 ### Return type
 
@@ -157,7 +165,7 @@ require 'dkron-rb'
 
 api_instance = Dkron::JobsApi.new
 
-job_name = "job_name_example" # String | The job that needs to be run.
+job_name = 'job_name_example' # String | The job that needs to be run.
 
 
 begin
@@ -203,7 +211,7 @@ require 'dkron-rb'
 
 api_instance = Dkron::JobsApi.new
 
-job_name = "job_name_example" # String | The job that needs to be fetched.
+job_name = 'job_name_example' # String | The job that needs to be fetched.
 
 
 begin
@@ -219,6 +227,52 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **job_name** | **String**| The job that needs to be fetched. | 
+
+### Return type
+
+[**Job**](Job.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **toggle_job**
+> Job toggle_job(job_name)
+
+
+
+Toggle a job. 
+
+### Example
+```ruby
+# load the gem
+require 'dkron-rb'
+
+api_instance = Dkron::JobsApi.new
+
+job_name = 'job_name_example' # String | The job that needs to be toggled.
+
+
+begin
+  result = api_instance.toggle_job(job_name)
+  p result
+rescue Dkron::ApiError => e
+  puts "Exception when calling JobsApi->toggle_job: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **job_name** | **String**| The job that needs to be toggled. | 
 
 ### Return type
 
