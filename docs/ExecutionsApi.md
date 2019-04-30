@@ -21,7 +21,7 @@ require 'dkron-rb'
 
 api_instance = Dkron::ExecutionsApi.new
 
-job_name = "job_name_example" # String | The job that owns the executions to be fetched.
+job_name = 'job_name_example' # String | The job that owns the executions to be fetched.
 
 
 begin
