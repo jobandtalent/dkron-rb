@@ -1,4 +1,4 @@
-# Dkron::ExecutorConfig
+# Dkron::Restore
 
 ## Properties
 Name | Type | Description | Notes

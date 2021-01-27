@@ -57,10 +57,10 @@ require 'dkron-rb'
 api_instance = Dkron::DefaultApi.new
 
 begin
-  result = api_instance.get_leader
+  result = api_instance.busy
   p result
 rescue Dkron::ApiError => e
-  puts "Exception when calling DefaultApi->get_leader: #{e}"
+  puts "Exception when calling DefaultApi->busy: #{e}"
 end
 
 ```
@@ -71,13 +71,16 @@ All URIs are relative to *http://localhost:8080/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*Dkron::DefaultApi* | [**busy**](docs/DefaultApi.md#busy) | **GET** /busy | 
+*Dkron::DefaultApi* | [**get_is_leader**](docs/DefaultApi.md#get_is_leader) | **GET** /isleader | 
 *Dkron::DefaultApi* | [**get_leader**](docs/DefaultApi.md#get_leader) | **GET** /leader | 
-*Dkron::DefaultApi* | [**leave**](docs/DefaultApi.md#leave) | **GET** /leave | 
+*Dkron::DefaultApi* | [**leave**](docs/DefaultApi.md#leave) | **POST** /leave | 
 *Dkron::DefaultApi* | [**status**](docs/DefaultApi.md#status) | **GET** / | 
 *Dkron::ExecutionsApi* | [**list_executions_by_job**](docs/ExecutionsApi.md#list_executions_by_job) | **GET** /jobs/{job_name}/executions | 
 *Dkron::JobsApi* | [**create_or_update_job**](docs/JobsApi.md#create_or_update_job) | **POST** /jobs | 
 *Dkron::JobsApi* | [**delete_job**](docs/JobsApi.md#delete_job) | **DELETE** /jobs/{job_name} | 
 *Dkron::JobsApi* | [**get_jobs**](docs/JobsApi.md#get_jobs) | **GET** /jobs | 
+*Dkron::JobsApi* | [**restore**](docs/JobsApi.md#restore) | **POST** /restore | 
 *Dkron::JobsApi* | [**run_job**](docs/JobsApi.md#run_job) | **POST** /jobs/{job_name} | 
 *Dkron::JobsApi* | [**show_job_by_name**](docs/JobsApi.md#show_job_by_name) | **GET** /jobs/{job_name} | 
 *Dkron::JobsApi* | [**toggle_job**](docs/JobsApi.md#toggle_job) | **POST** /jobs/{job_name}/toggle | 
@@ -87,10 +90,10 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Dkron::Execution](docs/Execution.md)
- - [Dkron::ExecutorConfig](docs/ExecutorConfig.md)
  - [Dkron::Job](docs/Job.md)
  - [Dkron::Member](docs/Member.md)
  - [Dkron::Processors](docs/Processors.md)
+ - [Dkron::Restore](docs/Restore.md)
  - [Dkron::Status](docs/Status.md)
 
 
